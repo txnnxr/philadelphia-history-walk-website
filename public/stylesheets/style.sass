@@ -1,0 +1,106 @@
+@import 'pallette'
+@import 'fonts'
+
+body
+	font-family: $work-sans
+
+h1 h2 h3 h4
+	font-family: $work-sans
+//Header
+header
+	h1
+		font-size: 1.3em
+	#navicon
+		color: $ruddy-pink
+		float: left
+		font-size: 2em
+		text-decoration: none
+		position: relative
+		z-index: 9
+		width: 10%
+	#navicon.open
+		color: white
+	#navicon.open:hover
+		color: $old-rose
+	.title
+		display: block
+		float: right
+		margin-top: 0.6rem
+		margin-bottom: 0.6rem
+		text-align: center
+		width: 90%
+// Navigation
+#fade
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	background: #000
+	opacity: 0.5
+#main-nav
+	position: fixed
+	height: 100%
+	top: 0
+	left: -250px
+	background: $gainsboro
+	max-width: 250px
+	width: 100%
+	z-index: 5
+	text-align: center
+	display: flex
+	flex-direction: column
+	li
+		list-style: none
+		margin-top: 2rem
+		margin-bottom: 2rem
+	a
+		color: white
+		border-top: 1px solid #555
+		text-decoration: none
+		display: flex
+		justify-content: center
+	a:hover, a.current
+		background: #3c3c3c
+	#top-nav-item
+		margin-top: 5rem
+//Tagline
+.tagline
+	margin: auto
+	text-align: center
+//Reviews
+.reviews
+	background-color: $gainsboro
+.review-item-text
+	text-align: left
+.review-item-author
+	text-align: right
+//Tour Info
+#tour-info
+	background-color: $gainsboro
+//Guide Info
+#profile
+	border-radius: 100%
+	display: block
+	margin: auto
+	width: 75%
+#guide-name
+	font-size: 3rem
+	margin: auto
+	text-align: center
+#degree
+	text-align: center
+	margin-top: 0px
+#bio
+	font-size: 1.2rem
+// Email Form
+#email-form
+	background-color: $gainsboro
+	input
+		margin: auto
+		width: 97%
+	.form-field
+		margin-bottom: 0.5rem
+		margin-top: 0.5rem
+	textarea
+		width: 97%

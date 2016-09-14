@@ -1,0 +1,28 @@
+doctype html
+html
+	head
+	title Philadelphia History Walk
+	script(src="https://use.fontawesome.com/112cfad2d1.js")
+	link(rel='stylesheet', href='/stylesheets/style.css')
+	link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Neuton|Work+Sans')
+	body
+		header
+			h1.title Philadelphia History Walk
+			a(href="#")#navicon.closed &#9776;
+		nav#main-nav
+			a(href="/") 
+				li.current#top-nav-item PHW			
+			a(href="#")
+				li Budget
+			a(href="#")
+				li Map
+			a(href="#")
+				li Tour Info
+			a(href="#")
+				li Contact
+		.main-content
+			block content
+			#fade
+			script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
+			script(type="text/javascript" src="js/script.js")
+

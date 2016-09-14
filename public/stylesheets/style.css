@@ -1,0 +1,113 @@
+/* Coolors Exported Palette - coolors.co/ccdad1-016fb9-960200-d0d38f-afa98d */
+/* RGB */
+/* RGB */
+body {
+  font-family: "Work Sans", sans-serif; }
+
+h1 h2 h3 h4 {
+  font-family: "Work Sans", sans-serif; }
+
+header h1 {
+  font-size: 1.3em; }
+header #navicon {
+  color: #df928e;
+  float: left;
+  font-size: 2em;
+  text-decoration: none;
+  position: relative;
+  z-index: 9;
+  width: 10%; }
+header #navicon.open {
+  color: white; }
+header #navicon.open:hover {
+  color: #c58882; }
+header .title {
+  display: block;
+  float: right;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+  text-align: center;
+  width: 90%; }
+
+#fade {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5; }
+
+#main-nav {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: -250px;
+  background: #d1dede;
+  max-width: 250px;
+  width: 100%;
+  z-index: 5;
+  text-align: center;
+  display: flex;
+  flex-direction: column; }
+  #main-nav li {
+    list-style: none;
+    margin-top: 2rem;
+    margin-bottom: 2rem; }
+  #main-nav a {
+    color: white;
+    border-top: 1px solid #555;
+    text-decoration: none;
+    display: flex;
+    justify-content: center; }
+  #main-nav a:hover, #main-nav a.current {
+    background: #3c3c3c; }
+  #main-nav #top-nav-item {
+    margin-top: 5rem; }
+
+.tagline {
+  margin: auto;
+  text-align: center; }
+
+.reviews {
+  background-color: #d1dede; }
+
+.review-item-text {
+  text-align: left; }
+
+.review-item-author {
+  text-align: right; }
+
+#tour-info {
+  background-color: #d1dede; }
+
+#profile {
+  border-radius: 100%;
+  display: block;
+  margin: auto;
+  width: 75%; }
+
+#guide-name {
+  font-size: 3rem;
+  margin: auto;
+  text-align: center; }
+
+#degree {
+  text-align: center;
+  margin-top: 0px; }
+
+#bio {
+  font-size: 1.2rem; }
+
+#email-form {
+  background-color: #d1dede; }
+  #email-form input {
+    margin: auto;
+    width: 97%; }
+  #email-form .form-field {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem; }
+  #email-form textarea {
+    width: 97%; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,40 @@
+extends layout
+
+block content
+	h3.tagline
+		| Take a stroll through history
+	.reviews
+		.review-item
+			p.review-item-text
+				i This is a test review
+			p.review-item-author
+				b -- a test man 
+	#budget-box
+		h3.tagline
+		#budget-slider
+			p this is where the budget slider will go
+		#budget-map
+			p this is where the budget map will go
+	#tour-info
+		p Information about the tour
+		ul
+			li displayed
+			li stop
+			li by
+			li stop
+	#tour-guide-info
+		img#profile(src='/images/profile.jpg')
+		h1#guide-name Lauren Mason
+		p#degree
+			i B.A. History - Rutgers University
+		p#bio Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam erat metus, viverra vitae sollicitudin sed, ultricies sit amet enim. Quisque mauris orci, ultrices non nisl sit amet, hendrerit tristique erat. Nulla semper rutrum quam in auctor. Nulla facilisi. Cras ipsum libero, feugiat vel nibh varius, porttitor auctor nibh. Donec at mauris quis nibh lacinia pulvinar. Quisque at feugiat est. Nam cursus erat ut nunc sagittis, ac tempus mauris commodo. Curabitur porttitor at urna vitae convallis. Nunc placerat augue ac nunc tempor, et vestibulum augue molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum laoreet justo vitae aliquam.
+	form#email-form
+		h2 Got a Question?
+		h3 Send us an email and we'll get back to you ASAP!
+		p.form-field Name:
+		input(type="text")
+		p.form-field Email:
+		input(type="email")
+		p.form-field Message:
+		textarea(name="message", rows="5")
+		input(type="submit")
