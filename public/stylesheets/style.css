@@ -1,69 +1,79 @@
 /* Coolors Exported Palette - coolors.co/ccdad1-016fb9-960200-d0d38f-afa98d */
 /* RGB */
 /* RGB */
+:root {
+  font-size: 24px; }
+
 body {
-  font-family: "Work Sans", sans-serif; }
+  font-family: "Work Sans", sans-serif;
+  margin: -23px 0; }
 
 h1 h2 h3 h4 {
   font-family: "Work Sans", sans-serif; }
 
-header h1 {
-  font-size: 1.3em; }
-header #navicon {
-  color: #df928e;
-  float: left;
-  font-size: 2em;
-  text-decoration: none;
-  position: relative;
-  z-index: 9;
-  width: 10%; }
-header #navicon.open {
-  color: white; }
-header #navicon.open:hover {
-  color: #c58882; }
-header .title {
-  display: block;
-  float: right;
-  margin-top: 0.6rem;
-  margin-bottom: 0.6rem;
-  text-align: center;
-  width: 90%; }
+header {
+  height: 5rem; }
+  header h1 {
+    font-size: 1.3em; }
+  header .title {
+    display: block;
+    text-align: center; }
 
-#fade {
+.toggle {
   position: fixed;
-  top: 0;
+  top: 20px;
   right: 0;
   bottom: 0;
-  left: 0;
-  background: #000;
-  opacity: 0.5; }
+  left: 20px;
+  z-index: 2;
+  text-decoration: none;
+  font-size: 2rem;
+  color: black;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  width: 0%; }
 
-#main-nav {
+.page-content {
+  position: relative;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  z-index: 1; }
+
+.container {
+  background-color: white;
+  padding: 1rem; }
+
+.sidebar {
   position: fixed;
-  height: 100%;
-  top: 0;
-  left: -250px;
-  background: #d1dede;
-  max-width: 250px;
-  width: 100%;
-  z-index: 5;
-  text-align: center;
-  display: flex;
-  flex-direction: column; }
-  #main-nav li {
-    list-style: none;
-    margin-top: 2rem;
-    margin-bottom: 2rem; }
-  #main-nav a {
-    color: white;
-    border-top: 1px solid #555;
-    text-decoration: none;
-    display: flex;
-    justify-content: center; }
-  #main-nav a:hover, #main-nav a.current {
-    background: #3c3c3c; }
-  #main-nav #top-nav-item {
-    margin-top: 5rem; }
+  top: 0px;
+  right: 0;
+  bottom: 0px;
+  left: 0px;
+  z-index: 0;
+  width: 120px;
+  padding: 30px;
+  background: #333; }
+
+#toggler {
+  display: none; }
+  #toggler:checked + .page-wrap .toggle {
+    left: 200px; }
+  #toggler:checked + .page-wrap .page-content {
+    padding-left: 180px; }
+
+a {
+  text-decoration: none; }
+
+li {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  list-style: none;
+  -webkit-font-smoothing: antialiased; }
+  li:hover {
+    color: white; }
 
 .tagline {
   margin: auto;
@@ -77,6 +87,22 @@ header .title {
 
 .review-item-author {
   text-align: right; }
+
+.map {
+  display: block;
+  margin: auto; }
+
+iframe {
+  display: block; }
+
+#mid-map {
+  display: none; }
+
+#high-map {
+  display: none; }
+
+#budget-slider {
+  text-align: center; }
 
 #tour-info {
   background-color: #d1dede; }
@@ -100,14 +126,21 @@ header .title {
   font-size: 1.2rem; }
 
 #email-form {
-  background-color: #d1dede; }
+  background-color: #d1dede;
+  padding: 0.25em; }
+  #email-form h2 {
+    font-size: 1.4rem; }
   #email-form input {
+    font-size: 1rem;
     margin: auto;
-    width: 97%; }
+    box-sizing: border-box;
+    display: block;
+    width: 100%; }
   #email-form .form-field {
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem; }
+    margin-bottom: 0.5em;
+    margin-top: 0.5em; }
   #email-form textarea {
-    width: 97%; }
+    box-sizing: border-box;
+    width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

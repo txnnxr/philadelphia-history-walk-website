@@ -1,40 +1,46 @@
 extends layout
 
 block content
-	h3.tagline
-		| Take a stroll through history
-	.reviews
-		.review-item
-			p.review-item-text
-				i This is a test review
-			p.review-item-author
-				b -- a test man 
-	#budget-box
-		h3.tagline
-		#budget-slider
-			p this is where the budget slider will go
-		#budget-map
-			p this is where the budget map will go
-	#tour-info
-		p Information about the tour
-		ul
-			li displayed
-			li stop
-			li by
-			li stop
-	#tour-guide-info
-		img#profile(src='/images/profile.jpg')
-		h1#guide-name Lauren Mason
-		p#degree
-			i B.A. History - Rutgers University
-		p#bio Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam erat metus, viverra vitae sollicitudin sed, ultricies sit amet enim. Quisque mauris orci, ultrices non nisl sit amet, hendrerit tristique erat. Nulla semper rutrum quam in auctor. Nulla facilisi. Cras ipsum libero, feugiat vel nibh varius, porttitor auctor nibh. Donec at mauris quis nibh lacinia pulvinar. Quisque at feugiat est. Nam cursus erat ut nunc sagittis, ac tempus mauris commodo. Curabitur porttitor at urna vitae convallis. Nunc placerat augue ac nunc tempor, et vestibulum augue molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum laoreet justo vitae aliquam.
-	form#email-form
-		h2 Got a Question?
-		h3 Send us an email and we'll get back to you ASAP!
-		p.form-field Name:
-		input(type="text")
-		p.form-field Email:
-		input(type="email")
-		p.form-field Message:
-		textarea(name="message", rows="5")
-		input(type="submit")
+	.container
+		header
+			h1.title Philadelphia History Walk
+			h3.tagline
+				| Take a stroll through history
+		.reviews
+			.review-item
+				p.review-item-text
+					i This is a test review
+				p.review-item-author
+					b -- a test man 
+		#budget-box(ng-controller="budgetController")
+			h3.tagline
+			#budget-slider
+				input(type="range", min="10", max="50", value='sliderValue', ng-model="sliderValue" ng-change="update()")
+				span#range ${{sliderValue}}
+			#budget-map
+				iframe(src="https://www.google.com/maps/embed?pb=!1m38!1m12!1m3!1d8332.189961847112!2d-75.16747892845811!3d39.95077037912535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m23!3e2!4m5!1s0x89c6c6253d792027%3A0xac11792b783289f6!2sSEPTA+Pedestrian+Concourse%2C+Philadelphia%2C+PA+19102!3m2!1d39.950072899999995!2d-75.1641037!4m5!1s0x0%3A0xcd8fd007dc1d6b01!2sReading+Terminal+Market!3m2!1d39.9532281!2d-75.1589546!4m5!1s0x0%3A0x4bffbd66a18bf2e2!2sThe+Franklin+Residences!3m2!1d39.9496082!2d-75.1552559!4m3!3m2!1d39.949654699999996!2d-75.1501344!5e0!3m2!1sen!2sus!4v1474399715845" width="800" height="600" frameborder="0" style="border:0" allowfullscreen).map#low-map
+				iframe(src="https://www.google.com/maps/embed?pb=!1m32!1m12!1m3!1d9970.376790219043!2d-75.18004083464018!3d39.9609249411703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m17!3e2!4m3!3m2!1d39.9529528!2d-75.165123!4m3!3m2!1d39.955204699999996!2d-75.1630496!4m3!3m2!1d39.9581583!2d-75.172606!4m3!3m2!1d39.9647814!2d-75.17984299999999!5e0!3m2!1sen!2sus!4v1474404448065" width="800" height="600" frameborder="0" style="border:0" allowfullscreen).map#mid-map
+				iframe(src="https://www.google.com/maps/embed?pb=!1m40!1m12!1m3!1d6095.595293887351!2d-75.16753417991085!3d39.95530206085873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m25!3e2!4m5!1s0x89c6c89d4c827305%3A0x422e2cfc614824ef!2s700+Walnut+Street%2C+Philadelphia%2C+PA+19106!3m2!1d39.947950999999996!2d-75.1532156!4m3!3m2!1d39.9486239!2d-75.1500705!4m5!1s0x0%3A0xce39e053fb81ef23!2sLiberty+Bell!3m2!1d39.949610299999996!2d-75.1502821!4m3!3m2!1d39.9537455!2d-75.1498275!4m3!3m2!1d39.9576378!2d-75.1698436!5e0!3m2!1sen!2sus!4v1474412193767" width="800" height="600" frameborder="0" style="border:0" allowfullscreen).map#high-map
+		#tour-info
+			p Information about the tour
+			ul
+				li displayed
+				li stop
+				li by
+				li stop
+		#tour-guide-info
+			img#profile(src='/images/profile.jpg')
+			h1#guide-name Lauren Mason
+			p#degree
+				i B.A. History - Rutgers University
+			p#bio Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam erat metus, viverra vitae sollicitudin sed, ultricies sit amet enim. Quisque mauris orci, ultrices non nisl sit amet, hendrerit tristique erat. Nulla semper rutrum quam in auctor. Nulla facilisi. Cras ipsum libero, feugiat vel nibh varius, porttitor auctor nibh. Donec at mauris quis nibh lacinia pulvinar. Quisque at feugiat est. Nam cursus erat ut nunc sagittis, ac tempus mauris commodo. Curabitur porttitor at urna vitae convallis. Nunc placerat augue ac nunc tempor, et vestibulum augue molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum laoreet justo vitae aliquam.
+		form#email-form
+			h2 Got a Question?
+			h3 Send us an email and we'll get back to you ASAP!
+			p.form-field Name:
+			input(type="text")
+			p.form-field Email:
+			input(type="email")
+			p.form-field Message:
+			textarea(name="message", rows="5")
+			input(type="submit")

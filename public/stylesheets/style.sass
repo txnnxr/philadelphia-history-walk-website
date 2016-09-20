@@ -1,69 +1,64 @@
 @import 'pallette'
 @import 'fonts'
+@import 'bourbon/bourbon'
+$container: 0.25em
+
+
+\:root
+	font-size: 24px
 
 body
 	font-family: $work-sans
-
+	margin: -23px 0
 h1 h2 h3 h4
 	font-family: $work-sans
 //Header
 header
+	height: 5rem
 	h1
 		font-size: 1.3em
-	#navicon
-		color: $ruddy-pink
-		float: left
-		font-size: 2em
-		text-decoration: none
-		position: relative
-		z-index: 9
-		width: 10%
-	#navicon.open
-		color: white
-	#navicon.open:hover
-		color: $old-rose
 	.title
 		display: block
-		float: right
-		margin-top: 0.6rem
-		margin-bottom: 0.6rem
 		text-align: center
-		width: 90%
 // Navigation
-#fade
-	position: fixed
-	top: 0
-	right: 0
-	bottom: 0
-	left: 0
-	background: #000
-	opacity: 0.5
-#main-nav
-	position: fixed
-	height: 100%
-	top: 0
-	left: -250px
-	background: $gainsboro
-	max-width: 250px
-	width: 100%
-	z-index: 5
-	text-align: center
-	display: flex
-	flex-direction: column
-	li
-		list-style: none
-		margin-top: 2rem
-		margin-bottom: 2rem
-	a
-		color: white
-		border-top: 1px solid #555
-		text-decoration: none
-		display: flex
-		justify-content: center
-	a:hover, a.current
-		background: #3c3c3c
-	#top-nav-item
-		margin-top: 5rem
+.toggle
+	+position(fixed, 20px 0 0 20px)
+	z-index: 2
+	text-decoration: none
+	font-size: 2rem
+	color: black
+	+transition()
+	width: 0%
+.page-content
+	position: relative
+	+transition()
+	z-index: 1
+.container
+	background-color: white
+	padding: 1rem
+.sidebar
+	+position(fixed, 0px 0 0px 0px)
+	z-index: 0	
+	width: 120px
+	padding: 30px
+	background: #333
+#toggler
+	display: none
+	&:checked + .page-wrap
+		.toggle
+			left: 200px
+		.page-content
+			padding-left: 180px
+a
+	text-decoration: none
+li
+	color: rgba(255,255,255, 0.8)
+	font-size: 1.2rem
+	margin-bottom: 16px
+	list-style: none
+	-webkit-font-smoothing: antialiased
+	&:hover
+		color: rgba(255,255,255, 1)
 //Tagline
 .tagline
 	margin: auto
@@ -75,6 +70,21 @@ header
 	text-align: left
 .review-item-author
 	text-align: right
+
+//have an array of maps and use angular to dispaly map based on current price on slider
+.map
+	display: block
+	margin: auto
+iframe
+	display: block
+#mid-map
+	display: none
+#high-map
+	display: none
+#budget-slider
+	text-align: center
+
+	
 //Tour Info
 #tour-info
 	background-color: $gainsboro
@@ -96,11 +106,18 @@ header
 // Email Form
 #email-form
 	background-color: $gainsboro
+	padding: $container
+	h2
+		font-size: 1.4rem
 	input
+		font-size: 1rem
 		margin: auto
-		width: 97%
+		box-sizing: border-box
+		display: block
+		width: 100%
 	.form-field
-		margin-bottom: 0.5rem
-		margin-top: 0.5rem
+		margin-bottom: 0.5em
+		margin-top: 0.5em
 	textarea
-		width: 97%
+		box-sizing: border-box
+		width: 100%
